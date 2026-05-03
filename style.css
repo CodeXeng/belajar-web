@@ -1,12 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
     line-height: 1.6;
     padding: 20px;
 }
 
 h1 {
-    color: #334a61;
-    border-bottom: 2px solid #2c3e50;
+    color: #bd1414;
+    border-bottom: 2px solid #000000;
 }
+h2{color: #dab614;
+    border-bottom: 2px solid #000000;}
