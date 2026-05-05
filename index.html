@@ -31,15 +31,62 @@
 </section>
 <<button class="btn-contact" onclick="ubahPesan()">Klik untuk Info Magang</button>
 <p id="pesan-magang"></p>
+<!-- Menambahkan Footer -->
+    <footer>
+        <p>© 2026 CodeXeng - Day 3 belajar coding</p>
+        <button id="dark-mode-btn" class="btn-contact">Ubah Tema</button>
+    </footer>
 
+    <script>
+        // Fungsi Toggle Pesan Magang
+        function ubahPesan() {
+            const elemenPesan = document.getElementById("pesan-magang");
+            if (elemenPesan.innerHTML === "") {
+                elemenPesan.innerHTML = "📍 Penempatan: SHE Division - PT Semen Padang";
+                elemenPesan.style.color = "#bd1414";
+                elemenPesan.style.fontWeight = "bold";
+            } else {
+                elemenPesan.innerHTML = "";
+            }
+        }
+
+        // Fungsi Dark Mode Sederhana
+        const btnTema = document.getElementById("dark-mode-btn");
+        btnTema.onclick = function() {
+            document.body.classList.toggle("dark-theme");
+        };
+    </script>
+</body>
 <script>
-    function ubahPesan() {
-        // Mengambil elemen berdasarkan ID dan mengubah isinya
-        const elemenPesan = document.getElementById("pesan-magang");
-        elemenPesan.innerHTML = "📍 Penempatan: SHE Division - PT Semen Padang";
-        elemenPesan.style.color = "#bd1414";
-        elemenPesan.style.fontWeight = "bold";
+// Database Mini untuk Info Magang Anda
+const dataMagang = {
+    judul: "Rencana Kerja Praktik 2026",
+    lokasi: "SHE Division - PT Semen Padang",
+    periode: "1 Juli - 15 Agustus 2026",
+    fokus: "Evaluasi Sistem Pengolahan Air Limbah (IPAL)"
+};
+
+function ubahPesan() {
+    const elemenPesan = document.getElementById("pesan-magang");
+    
+    if (elemenPesan.innerHTML === "") {
+        elemenPesan.style.display = "block";
+        // Menggunakan Template Literals untuk memanggil data object
+        elemenPesan.innerHTML = `
+            <div style="border-left: 4px solid #bd1414; padding-left: 15px;">
+                <h3 style="margin-top: 0; color: #bd1414;">${dataMagang.judul}</h3>
+                <p>📍 <strong>Lokasi:</strong> ${dataMagang.lokasi}</p>
+                <p>📅 <strong>Periode:</strong> ${dataMagang.periode}</p>
+                <p>🎯 <strong>Fokus:</strong> ${dataMagang.fokus}</p>
+            </div>
+        `;
+        elemenPesan.style.backgroundColor = "#fff5f5";
+        elemenPesan.style.padding = "15px";
+    } else {
+        elemenPesan.innerHTML = "";
+        elemenPesan.style.display = "none";
     }
+}
 </script>
 </body>
 </html>

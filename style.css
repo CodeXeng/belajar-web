@@ -26,3 +26,84 @@ h2{color: #dab614;
     border: 1px solid #ddd;
     font-weight: bold;
 }
+/* Desain tombol modern */
+.btn-contact {
+    background-color: #bd1414; /* Warna merah khas Anda */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s; /* Efek halus saat berubah */
+    /* ... kode yang lama ... */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);[cite: 1]
+}
+#pesan-magang {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    /* Jangan masukkan border, background, atau padding di sini */
+    padding: 0; 
+    border: none;
+    background-color: transparent;
+}
+/* Efek Hover untuk Skill Cards */
+.skill-card:hover {
+    background-color: #dab614; /* Warna kuning emas Anda */
+    color: white;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Styling Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Variasi Dark Theme */
+.dark-theme {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.dark-theme h1, .dark-theme h2 {
+    border-bottom-color: #ffffff;
+}
+
+.dark-theme .skill-card {
+    background-color: #333;
+    color: white;
+}
+/* Jika layar lebih kecil dari 600px (ukuran HP) */
+@media (max-width: 600px) {
+    .skill-container {
+        flex-direction: column; /* Skill yang tadinya ke samping, jadi berjejer ke bawah */
+    }
+    
+    h1 {
+        font-size: 1.5rem; /* Memperkecil judul agar tidak terpotong di HP */
+    }
+}
+/* Pengaturan khusus untuk layar HP (Maksimal lebar 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Mengurangi padding agar konten lebih luas di layar kecil */
+    }
+
+    .skill-container {
+        flex-direction: column; /* Mengubah baris menjadi kolom */
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Menyesuaikan ukuran font agar tidak terpotong */
+    }
+
+    .btn-contact {
+        width: 100%; /* Membuat tombol selebar layar HP */
+        box-sizing: border-box;
+    }
+}
