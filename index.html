@@ -21,8 +21,25 @@
     </section>
 
     <section>
-        <h2>Skill Programming</h2>
-        <p>Sedang mempelajari: HTML, CSS, JavaScript, dan Git.</p>
-    </section>
+    <h2>Skill Programming</h2>
+    <div class="skill-container">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Git</div>
+    </div>
+</section>
+<<button class="btn-contact" onclick="ubahPesan()">Klik untuk Info Magang</button>
+<p id="pesan-magang"></p>
+
+<script>
+    function ubahPesan() {
+        // Mengambil elemen berdasarkan ID dan mengubah isinya
+        const elemenPesan = document.getElementById("pesan-magang");
+        elemenPesan.innerHTML = "📍 Penempatan: SHE Division - PT Semen Padang";
+        elemenPesan.style.color = "#bd1414";
+        elemenPesan.style.fontWeight = "bold";
+    }
+</script>
 </body>
 </html>

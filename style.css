@@ -12,3 +12,17 @@ h1 {
 }
 h2{color: #dab614;
     border-bottom: 2px solid #000000;}
+/* Membuat container skill menjadi fleksibel */
+.skill-container {
+    display: flex;
+    gap: 15px; /* Memberi jarak antar kotak skill */
+    flex-wrap: wrap; /* Agar otomatis turun jika layar sempit */
+}
+
+.skill-card {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
